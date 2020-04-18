@@ -20,6 +20,7 @@ public class Main {
     public static void main(String[] args) {
         
         Cliente cli = new Cliente("nome", "123", 10);
+        Cliente cli2 = new Cliente("joao", "123", 10);
         
         List<Produto> produtos = new ArrayList<>();
         produtos.add(new Produto("caneta", 1, 10));
@@ -37,6 +38,7 @@ public class Main {
         
         //Venda realizada
         Venda venda = new Venda(cli, items, sum);
+        Venda venda2 = new Venda(cli2, items, sum);
         
         produtos.get(1).setValor(100);
         List<ItemVenda> it = venda.getItemVendas();
@@ -44,6 +46,7 @@ public class Main {
         System.out.println(prod.getDescricao());
         System.out.println(prod.getValor());
         System.out.println("Valor vendido: " + it.get(0).getValorVendido());
+        System.out.println("Valor vendido: " + produtos.get(1).getValor());
         
     }
     
